@@ -1,0 +1,734 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E71D3879-D490-4FEE-A24E-FAB75AFD6886}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TencateCarrier</RootNamespace>
+    <AssemblyName>TencateCarrier</AssemblyName>
+    <MyType>Windows</MyType>
+    <OptionStrict>On</OptionStrict>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <OptionInfer>On</OptionInfer>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DefineConstants>DEBUG=1</DefineConstants>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <Optimize>false</Optimize>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>Full</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>false</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DefineConstants>
+    </DefineConstants>
+    <NoWarn>42030,42104,42108,42109</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+    <DebugSymbols>true</DebugSymbols>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.ComponentModel" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Globalization.CultureInfo" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code\Commands\RD.vb" />
+    <Compile Include="Code\Common\Encoder.vb" />
+    <Compile Include="Code\Common\Flowmeter.vb" />
+    <Compile Include="Code\Common\FlowmeterAnalog.vb" />
+    <Compile Include="Code\Common\Support.vb" />
+    <Compile Include="Code\Database\DatabaseBDC.vb" />
+    <Compile Include="Code\Dispense\DispenseHeadControl.vb" />
+    <Compile Include="Code\Dispense\DispenseScheduler.vb" />
+    <Compile Include="Code\Dispense\DispenseJob.vb" />
+    <Compile Include="Code\Distributor\DistributorControl.vb" />
+    <Compile Include="Code\Distributor\DistributorPistons.vb" />
+    <Compile Include="Code\Distributor\DistributorPort.vb" />
+    <Compile Include="Code\Distributor\DistributorPorts.vb" />
+    <Compile Include="Code\Database\DatabaseEAS.vb" />
+    <Compile Include="Code\Common\Settings\Settings.Remote.vb" />
+    <Compile Include="Code\Common\Settings\Settings.vb" />
+    <Compile Include="Code\Common\Smoothing.vb" />
+    <Compile Include="Code\Common\Timers.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Color.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Conversions.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Draw.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Email.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Log.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Sql.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.Translations.vb" />
+    <Compile Include="Code\Common\Utilities\Utilities.vb" />
+    <Compile Include="Code\ControlCode\Alarms.vb" />
+    <Compile Include="Code\ControlCode\ControlCode.Remote.vb" />
+    <Compile Include="Code\ControlCode\ControlCode.Status.vb" />
+    <Compile Include="Code\ControlCode\ControlCode.DrawScreen.vb" />
+    <Compile Include="Code\User Interface\Mimic\MimicDissolver.Designer.vb">
+      <DependentUpon>MimicDissolver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDissolver.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDissolverDrawing.Designer.vb">
+      <DependentUpon>MimicDissolverDrawing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDissolverDrawing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="My Project\Resources1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Notes.vb" />
+    <Compile Include="Code\User Interface\0Common\Controls\ControlDataRowEditNew.Designer.vb">
+      <DependentUpon>ControlDataRowEditNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlDataRowEditNew.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\TextBoxX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\DataGridViewX.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\AddDispense\ControlAddDispense.Designer.vb">
+      <DependentUpon>ControlAddDispense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\AddDispense\ControlAddDispense.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\AddDispense\FormAddDispense.Designer.vb">
+      <DependentUpon>FormAddDispense.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\AddDispense\FormAddDispense.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\MoveDistributor\ControlMoveDistributor.Designer.vb">
+      <DependentUpon>ControlMoveDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\MoveDistributor\ControlMoveDistributor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\MoveDistributor\FormMoveDistributor.Designer.vb">
+      <DependentUpon>FormMoveDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Forms\MoveDistributor\FormMoveDistributor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDevice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDeviceAuger.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicControlDistributor.Designer.vb">
+      <DependentUpon>MimicControlDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicControlDistributor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicControlDistributorPort.Designer.vb">
+      <DependentUpon>MimicControlDistributorPort.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicControlDistributorPort.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDeviceLeftRight.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDeviceMixer.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDevicePump.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDeviceValve.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicDeviceVibrate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicFlowmeter.Designer.vb">
+      <DependentUpon>MimicFlowmeter.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicFlowmeter.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicProgressBar.Designer.vb">
+      <DependentUpon>MimicProgressBar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicProgressBar.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ListViewBuffered.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicLevelIndicator.Designer.vb">
+      <DependentUpon>MimicLevelIndicator.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicLevelIndicator.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\KeysNumeric.Designer.vb">
+      <DependentUpon>KeysNumeric.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\KeysNumeric.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\KeysQwerty.Designer.vb">
+      <DependentUpon>KeysQwerty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\KeysQwerty.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormNumberPad.Designer.vb">
+      <DependentUpon>FormNumberPad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormNumberPad.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormNumeric.Designer.vb">
+      <DependentUpon>FormNumeric.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormNumeric.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormQwerty.Designer.vb">
+      <DependentUpon>FormQwerty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormQwerty.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlButtonClose.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlButtonNoFocus.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlDataRowEdit.Designer.vb">
+      <DependentUpon>ControlDataRowEdit.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlDataRowEdit.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlKeyboard.Designer.vb">
+      <DependentUpon>ControlKeyboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlKeyboard.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlNumberPad.Designer.vb">
+      <DependentUpon>ControlNumberPad.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Controls\ControlNumberPad.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicValveDispense.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormGallons.Designer.vb">
+      <DependentUpon>FormGallons.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\0Common\Forms\FormGallons.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDistributor.Designer.vb">
+      <DependentUpon>MimicDistributor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDistributor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDistributorDrawing.Designer.vb">
+      <DependentUpon>MimicDistributorDrawing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicDistributorDrawing.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicQueue.Designer.vb">
+      <DependentUpon>MimicQueue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicQueue.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\Mimic.Designer.vb">
+      <DependentUpon>Mimic.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\Mimic.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\0Common\MimicOverrides.vb" />
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="Code\User Interface\Mimic\MimicTest.Designer.vb">
+      <DependentUpon>MimicTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Code\User Interface\Mimic\MimicTest.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code\System\Adam.vb" />
+    <Compile Include="Code\System\Control.vb" />
+    <Compile Include="Code\ControlCode\Parameters.vb" />
+    <Compile Include="Code\ControlCode\ControlCode.vb" />
+    <Compile Include="Code\ControlCode\IO.vb" />
+    <Compile Include="Code\System\Modbus.vb" />
+    <Compile Include="Code\System\ModbusOptimass.vb" />
+    <Compile Include="Code\System\Ports.vb" />
+    <Compile Include="Code\System\Support.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Code\User Interface\0Common\Controls\ControlDataRowEditNew.resx">
+      <DependentUpon>ControlDataRowEditNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Forms\AddDispense\ControlAddDispense.resx">
+      <DependentUpon>ControlAddDispense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Forms\MoveDistributor\ControlMoveDistributor.resx">
+      <DependentUpon>ControlMoveDistributor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Forms\AddDispense\FormAddDispense.resx">
+      <DependentUpon>FormAddDispense.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Forms\MoveDistributor\FormMoveDistributor.resx">
+      <DependentUpon>FormMoveDistributor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\0Common\MimicControlDistributor.resx">
+      <DependentUpon>MimicControlDistributor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\0Common\MimicControlDistributorPort.resx">
+      <DependentUpon>MimicControlDistributorPort.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\0Common\MimicFlowmeter.resx">
+      <DependentUpon>MimicFlowmeter.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Controls\KeysQwerty.resx">
+      <DependentUpon>KeysQwerty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Forms\FormNumberPad.resx">
+      <DependentUpon>FormNumberPad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Forms\FormNumeric.resx">
+      <DependentUpon>FormNumeric.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Forms\FormQwerty.resx">
+      <DependentUpon>FormQwerty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Controls\ControlDataRowEdit.resx">
+      <DependentUpon>ControlDataRowEdit.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Controls\ControlNumberPad.resx">
+      <DependentUpon>ControlNumberPad.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\0Common\Forms\FormGallons.resx">
+      <DependentUpon>FormGallons.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicDissolver.resx">
+      <DependentUpon>MimicDissolver.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicDissolverDrawing.resx">
+      <DependentUpon>MimicDissolverDrawing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicDistributor.resx">
+      <DependentUpon>MimicDistributor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicDistributorDrawing.resx">
+      <DependentUpon>MimicDistributorDrawing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicQueue.resx">
+      <DependentUpon>MimicQueue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\Mimic.resx">
+      <DependentUpon>Mimic.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <SubType>Designer</SubType>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources1.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Code\User Interface\Mimic\MimicTest.resx">
+      <DependentUpon>MimicTest.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Alarm16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BarCode16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bespoke16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blocked16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancel16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckmarkThin16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DeleteRed16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drain16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Drain24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Edit16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterHorizontalOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterHorizontalOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterVerticalOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FlowmeterVerticalOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hammer24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hand16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hold16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IO16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LDU16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Link16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicAugerLeftOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicAugerLeftOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicAugerRightOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicAugerRightOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicDissolver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicDistributor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicDistributorBox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPort.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortConnected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortConnected1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortConnected2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortTarget.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortTarget1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicPortTarget2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicTencateCarrier800.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicTencateCarrier1024.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicVibrateOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MimicVibrateOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minus16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MixerMotorOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MixerMotorOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MixTanks16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveFirst16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveLast16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MoveNext16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MovePrevious16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewDocument16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Okay16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Okay24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OverviewContainerClose.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Patch16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pause16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Play16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayBlue16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PlayGreen16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Products16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PumpOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PumpOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Recipes16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Refresh16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reset16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestartJob16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RestartJob24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Retry16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Retry24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Run16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RunTanks16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Save16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\StepOver24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Stop16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tap-water-icon24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveHorizontalError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveHorizontalOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveHorizontalOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveHorizontalPartial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveHorizontalPartialError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveOn .png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValvePartial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValvePartialError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveVerticalError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveVerticalOff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveVerticalOn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveVerticalPartial.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ValveVerticalPartialError.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning24x24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningButton16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WarningSmall16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WorkList16x16.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
